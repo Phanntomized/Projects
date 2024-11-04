@@ -1,0 +1,111 @@
+Test Case 1: Normal Case (Height = 5, Width = 10)
+-------------------------------------------------
+The integers from 5 to 10 are:
+5 6 7 8 9 10
+and the average of those numbers is 7.5.
+
+**********
+*        *
+*        *
+*        *
+*        *
+**********
+**
+****
+******
+********
+**********
+
+-------------------------------------------------
+
+Test Case 2: Edge Case - Lower Bound on Height (Height = 3, Width = 6)
+----------------------------------------------------------------------
+The integers from 3 to 6 are:
+3 4 5 6
+and the average of those numbers is 4.5.
+
+******
+*    *
+*    *
+******
+
+**
+****
+******
+
+----------------------------------------------------------------------
+
+Test Case 3: Edge Case - Upper Bound on Width (Height = 5, Width = 20)
+----------------------------------------------------------------------
+The integers from 5 to 20 are:
+5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+and the average of those numbers is 12.5.
+
+********************
+*                  *
+*                  *
+*                  *
+*                  *
+********************
+**
+****
+******
+********
+**********
+************
+**************
+****************
+******************
+********************
+
+----------------------------------------------------------------------
+
+Test Case 4: Invalid Height and Valid Width (Invalid Height = 2, Valid Height = 6, Width = 15)
+-----------------------------------------------------------------------------------------------
+Enter a box height (between 3 and 10): 2
+That number is out of bounds: Try again: 6
+Enter a box width (between 7 and 20): 15
+
+The integers from 6 to 15 are:
+6 7 8 9 10 11 12 13 14 15
+and the average of those numbers is 10.5.
+
+***************
+*             *
+*             *
+*             *
+*             *
+*             *
+***************
+**
+****
+******
+********
+**********
+************
+***************
+
+-----------------------------------------------------------------------------------------------
+
+Test Case 5: Invalid Width and Valid Height (Height = 4, Invalid Width = 4, Valid Width = 12)
+----------------------------------------------------------------------------------------------
+Enter a box height (between 3 and 10): 4
+Enter a box width (between 5 and 20): 4
+That number is out of bounds: Try again: 12
+
+The integers from 4 to 12 are:
+4 5 6 7 8 9 10 11 12
+and the average of those numbers is 8.0.
+
+************
+*          *
+*          *
+*          *
+************
+**
+****
+******
+********
+**********
+
+----------------------------------------------------------------------------------------------
