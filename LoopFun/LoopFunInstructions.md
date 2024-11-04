@@ -55,6 +55,7 @@ Output should look *exactly* like this output:
 
 ## Technical Details
 * As with all programs written in this course, maintainability is as important as functionality, so your code should be clear and easy to follow. Make sure it follows the class coding conventions, and double check your code against this checklist before submitting.
+* In the example above, the 6 is not a fixed value - it is because the user chose 5. If they had chosen 8, your program should have printed 9 as the lowest possible choice.
 * The file *must* be named ```loop_fun.py```
 * Copy the code I have given you in ```loop_fun.py```, located in the same repository, and put all of your code inside the ```main``` function.
 * You must have a header at the top of your code in the following style
