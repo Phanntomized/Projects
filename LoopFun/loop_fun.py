@@ -32,6 +32,13 @@ def main():
     for i in range(width):
         print("*",end="")
 
+    print()
+    num = 0
+    for i in range(height):
+        print()
+        num += 1
+        for i in range(num):
+            print("**",end="")
 
 #delete this line
     # add your code here - suggested parts added
