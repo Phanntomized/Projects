@@ -7,6 +7,7 @@ def main():
     width = int(input("Enter a box width (between 6 and 20): "))
     while not 6 <= width <= 20 or height > width:
         height = int(input("Number is out of bounds: Try again: "))
+    print()
     num = height
     avg = 0
     count = 0
