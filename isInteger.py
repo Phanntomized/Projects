@@ -1,56 +1,33 @@
-'''
-In this problem you will write a function named isInteger that determines whether or not the characters in a string 
-represent a valid integer. You will return True if it is an integer and False if it does not.
-
-When determining if a string represents an integer you should ignore any leading or trailing white space. 
-Once this white space is ignored, a string represents an integer if its length is at least one and it only contains digits, 
-or if its first character is either + or - and the first character is followed by one or more characters, all of which are 
-digits. You cannot use the built-in isdigit(), isnumeric(), isalnum(), isdecimal(), etc. functions. I want you to use in. 
-You also cannot use lists, arrays, or any other tools we have not learned yet. Call the parameter “_users_stirng_” and 
-allow the first character to be & as well
-
-Write at least 5 good test cases for this program that test various cases that would return True or False and your 
-function returns the correct values.
-
-'''
-
-def isInteger(users_string):
+def isInteger(user_string):
     blank = 0
-    if len(users_string) == 0:
+    if len(user_string) == 0:
         return False
-    for i in range(len(users_string)):
-        if users_string[i] == " ":
+    for letter in user_string:
+        if letter in " ":
             blank += 1
         else:
             break
-    for i in range(len(users_string)):
-        if users_string[-i] == " ":
-            neg_blank += 1
-        else:
-            break
-    neg_blank_total = users_string - neg_blank
-    if len(users_string) == blank:
+    if len(user_string) == blank:
         return False
-    if users_string[blank] in "+-&1234567890":
-        blank += 1
-        for i in range(blank, len(users_string)):
-            if users_string[i] not in  "1234567890":
-                if users_string[i] == " ":
-                    continue
-                else:
-                    return False
-        return True
-    else:
-        return False
-
+    user_string = user_string.strip()
+    if user_string[0] in "+-":
+        user_string = user_string[1:]
+        if len(user_string) == 0:
+            return False
+    for letter in user_string:
+        if letter not in  "1234567890":
+            return False
+    return True
     
-        
-print(isInteger("                 "))
-print(isInteger("444444"))
+print(isInteger("       "))
+print(isInteger("  11  11"))
 print(isInteger(""))
-print(isInteger("  25654-"))
-print(isInteger("256aa54  "))
-print(isInteger("134    "))
-print(isInteger("1+2345677655545"))
-print(isInteger("    -+134"))
-print(isInteger("-123456    "))
+print(isInteger("  11-  "))
+print(isInteger("11aa1  "))
+print(isInteger("11111-  "))
+print(isInteger(" 1+1111 "))
+print(isInteger("  -+11111"))
+print(isInteger("-11111  "))
+print(isInteger("- 11111  "))
+print(isInteger("  -five"))
+print(isInteger("-"))
