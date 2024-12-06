@@ -7,7 +7,7 @@ Once this white space is ignored, a string represents an integer if its length i
 or if its first character is either + or - and the first character is followed by one or more characters, all of which are 
 digits. You cannot use the built-in isdigit(), isnumeric(), isalnum(), isdecimal(), etc. functions. I want you to use in. 
 You also cannot use lists, arrays, or any other tools we have not learned yet. Call the parameter “_users_stirng_” and 
-allow the first character to be ‘&’ as well
+allow the first character to be & as well
 
 Write at least 5 good test cases for this program that test various cases that would return True or False and your 
 function returns the correct values.
@@ -23,16 +23,34 @@ def isInteger(users_string):
             blank += 1
         else:
             break
+    for i in range(len(users_string)):
+        if users_string[-i] == " ":
+            neg_blank += 1
+        else:
+            break
+    neg_blank_total = users_string - neg_blank
+    if len(users_string) == blank:
+        return False
     if users_string[blank] in "+-&1234567890":
         blank += 1
-        for i in range(len(users_string)):
-            if users_string[i] in " -+&1234567890":
-                continue
-            else:
-                return False
+        for i in range(blank, len(users_string)):
+            if users_string[i] not in  "1234567890":
+                if users_string[i] == " ":
+                    continue
+                else:
+                    return False
         return True
     else:
         return False
+
     
         
+print(isInteger("                 "))
+print(isInteger("444444"))
 print(isInteger(""))
+print(isInteger("  25654-"))
+print(isInteger("256aa54  "))
+print(isInteger("134    "))
+print(isInteger("1+2345677655545"))
+print(isInteger("    -+134"))
+print(isInteger("-123456    "))
